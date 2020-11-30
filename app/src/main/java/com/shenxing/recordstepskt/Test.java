@@ -17,7 +17,7 @@ import java.lang.ref.WeakReference;
  * on 2020/11/30.
  */
 public class Test extends AppCompatActivity {
-    
+
     private  StepSensorManger manger;
 
     @Override
@@ -55,4 +55,19 @@ public class Test extends AppCompatActivity {
         super.onDestroy();
         manger.unregisterSensor();
     }
+
+    //卡路里计算
+    /**
+     * 健走：k=0.8214
+     *
+     * 跑步：k=1.036
+     *
+     * 自行车：k=0.6142
+     *
+     * 轮滑、溜冰：k=0.518
+     *
+     * 室外滑雪：k=0.888
+     * **/
+    //跑步热量（kcal）＝体重（kg）×距离（公里）×运动系数
+    //calories = weight * distance * 0.8214;
 }

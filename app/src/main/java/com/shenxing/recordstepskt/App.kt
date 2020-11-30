@@ -10,7 +10,9 @@ class App : Application() {
 
     override fun onCreate() {
         super.onCreate()
-        StepSensorManger.instances.initSensor(this)
-        StepSensorManger.instances.registerSensor()
+        StepSensorManger.instances.let {
+            it.initSensor(this)
+            it.registerSensor()
+        }
     }
 }
