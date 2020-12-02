@@ -27,12 +27,12 @@ public class Test extends AppCompatActivity {
         //总步数发生改变时回调
         manger.setCountSensorListener(new StepSensorManger.SensorListener() {
             @Override
-            public void onSensorChanged(SensorEvent event) {
+            public void onSensorChanged(SensorEvent event) {//event[0] 就是总步数
 
             }
 
             @Override
-            public void onAccuracyChanged(Sensor sensor, int accuracy) {
+            public void onAccuracyChanged(Sensor sensor, int accuracy) {//精度发生改变后的回调
 
             }
         });
